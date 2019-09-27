@@ -24,6 +24,66 @@
 			justify-content: center;
 			min-height: 400px;
 		}
+		.controls{
+			width:100%;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: center;
+			padding:30px;
+			box-sizing: border-box;
+		}
+		.controls .btn{
+			margin-right:30px;
+			font-size:0.5rem !important;
+			width:25%;
+		}
+		.controls .btn:last-child{
+			margin-right: 0;
+		}
+		.tips_{
+			width:100%;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content:space-evenly;
+			box-sizing: border-box;
+		}
+		.tips{
+			width:30%;
+			font-weight: bold;
+			text-align: center;
+		}
+		.tips:nth-child(1){
+			color:crimson;
+		}
+		.tips:nth-child(2){
+			color:hotpink;
+		}
+		.tips:nth-child(3){
+			color:lightsalmon;
+		}
+		.imgs{
+			width:100%;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content:space-evenly;
+			box-sizing: border-box;
+			margin:30px 0;
+		}
+		.btn_{
+			width:65%;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content:space-evenly;
+			box-sizing: border-box;
+			margin:30px auto;
+		}
+		.btn-warning{
+			color:lightyellow !important;
+		}
 		.wrap{
 			height: 150px;
 			width: 150px;
@@ -92,8 +152,6 @@
 		<label id="uploadAvatarBtn" for="uploadInput" class="btn btn-primary">上传头像</label>
 		<input type="file" id="uploadInput" name="uploadInput" style="display:none;">
 		<label id="saveAvatarBtn" class="btn btn-success">保存头像</label>
-		<!-- <label class="btn btn-info" onclick="location.reload(true)">刷新页面</label> -->
-		<!-- <label class="btn btn-info" onclick="location.replace(location.href)">刷新页面</label> -->
 		<a class="btn btn-info" style="margin-bottom: .5rem;" id="reloadBtn" href="/static/html/zhonghailei1991.html">刷新页面</a>
 	</div>
 	<div>
@@ -120,18 +178,19 @@
 		</div>
 		<p>1. 长按图片可下载</p>
 	</div>
-	<p>1. 图片可拖动</p>
-	<p>2. 图片可缩放</p>
-	<p>3. 图片可旋转</p>
-
-	<div class="btn-group" role="group">
-	  <button type="button" class="btn btn-warning" id="switchPCPoint">pc端操作缩放旋转</button>
-	</div>
-	<div>
+	<div class="imgs">
 	  <img class="switch-avatar-icon" src="/static/img/wchat-moments-70/head1-1.png">
 	  <img class="switch-avatar-icon" src="/static/img/wchat-moments-70/head2.png">
 	  <img class="switch-avatar-icon" src="/static/img/wchat-moments-70/head3.png">
 	  <img class="switch-avatar-icon" src="/static/img/wchat-moments-70/head4.png">
+	</div>
+	<div class="tips_">
+		<p class="tips">1. 图片可拖动</p>
+		<p class="tips">2. 图片可缩放</p>
+		<p class="tips">3. 图片可旋转</p>
+	</div>
+	<div class="btn-group btn_" role="group">
+	  <button type="button" class="btn btn-warning" id="switchPCPoint">pc端操作缩放旋转</button>
 	</div>
 	
 
